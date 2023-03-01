@@ -103,6 +103,12 @@ Use the /Nsubscribers command to see the list of subscribed users.
     console.log("getTemperature")
   }
   setInterval(getTemperature, 3600000);
+  function keepActive() {
+    request("https://telegramtemperaturebot2.onrender.com/subscribers", function (err, res, body) {
+      console.log("keepActive")
+    });
+  }
+  setInterval(keepActive, 36000);
 }
 
 module.exports = funBot;
