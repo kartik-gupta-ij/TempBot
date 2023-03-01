@@ -3,13 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "client": "yarn --cwd ./client run start",
-    "client-dev": "yarn --cwd ./client run dev",
-    "server": "nodemon app.js",
-    "start": "concurrently \"yarn run server \" \"yarn run client\"",
-    "dev": "concurrently \"yarn run server \" \"yarn run client-dev\"",
-    "prod": "NODE_ENV=production node app.js",
-    "build": "cd client && yarn install && yarn run build"
+    "start": "node app.js"
   },
   "dependencies": {
     "concurrently": "^7.6.0",
